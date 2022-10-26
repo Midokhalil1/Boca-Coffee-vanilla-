@@ -4,16 +4,95 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>title</title>
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>contact</h1>
+        <h1 id="heading">contact</h1>
       </header>
       <main>
-        <form action="submit" method="post"></form>
+        <form action="/index.html" method="post" id="myForm">
+          <label for="email">Email Address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="youremail@email.com"
+          />
+          <br />
+          <label for="">Password</label>
+
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="password"
+            minlength="7"
+          />
+          <br />
+          <label for="age">age</label>
+          <input
+            min="18"
+            max="100"
+            type="number"
+            name=""
+            id="age"
+            placeholder="18++"
+          />
+          <br />
+          <label for="">Date</label>
+          <input type="date" name="date" id="date" />
+          <br />
+          <label for="description">description</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="5"
+          ></textarea>
+          <br />
+          <label for="file">File</label>
+          <input type="file" name="" id="" multiple />
+          <br />
+          <label for="cars">cars</label>
+          <select name="cars" id="cars">
+            <option value="selectone">Select One</option>
+            <option value="audi">Audi</option>
+            <option value="gmc">Gmc</option>
+            <option value="tesla" selected>Tesla</option>
+            <option value="ford">Ford</option>
+          </select>
+          <br />
+          <label for="radio">Select One</label>
+          <input type="radio" name="select" id="" value="myRadio" />
+          <input type="radio" name="select" id="" value="myRadio2" />
+          <input type="radio" name="select" id="" value="myRadio3" />
+          <button type="submit">submit</button>
+          <br />
+        </form>
       </main>
+      <button onclick="changeHeading()">Change Heading</button>
+
+      <button type="button" onclick="showTime()">Show Time</button>
+
+      <p id="date_time_button"></p>
     </div>
+    <script>
+      function changeHeading() {
+        const heading = document.getElementById("heading");
+        console.log(heading);
+
+        heading.innerHTML = "I'm New";
+        heading.style.color = "red";
+        heading.style.textAlign = "left";
+      }
+      function showTime() {
+        const showTime = (document.getElementById(
+          "date_time_button"
+        ).innerHTML = date());
+      }
+    </script>
   </body>
 </html>
