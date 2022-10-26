@@ -14,3 +14,18 @@ header {
     text-align: center;
     margin-bottom: 1em;
 }
+
+main{
+   
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main > div {
+    width: 30%;
+}
+
+main > div > p {
+    font-weight: bold;
+}
